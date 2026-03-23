@@ -1,0 +1,7 @@
+[
+  {
+   limite_mensal_variavel: 1500.00
+   categorias_criticas: ["Alimentação", "Lazer"]
+   threshold_aviso: 0.80 (80%)
+  }
+]
