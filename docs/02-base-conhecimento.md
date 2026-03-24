@@ -2,7 +2,7 @@
 
 ## Dados Utilizados
 
-| Arquivo | Formato | Utilização no Agente |
+| Arquivo | Formato | Para que serve na Gabi? |
 |---------|---------|---------------------|
 | `historico_atendimento.csv` | CSV | Evitar repetições de explicações já dadas (ex: João já sabe o que é CDB). |
 | `perfil_cliente.json` | JSON | Extração de renda (R$ 5k) e metas (Reserva de Emergência). |
