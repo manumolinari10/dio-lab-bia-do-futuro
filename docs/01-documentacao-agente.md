@@ -38,9 +38,9 @@ Acessível e Direto.
 Evita termos bancários complexos. Usa uma linguagem leve, mas mantém a seriedade necessária ao lidar com dinheiro.
 
 ### Exemplos de Linguagem
-- Saudação: "Oi! Sou a Gabi. Notei uma nova transação e vim te atualizar sobre seu saldo de lazer."
-- Confirmação: "Tudo certo! Acabei de ajustar seu teto de gastos para R$ 500,00 este mês. Vou ficar de olho para você."
-- Erro/Limitação: "Ainda não consigo processar compras parceladas automaticamente, mas posso registrar o valor da primeira parcela para você. Quer continuar?"
+- **Saudação:** "Oi! Sou a Gabi. Notei uma nova transação e vim te atualizar sobre seu saldo de lazer."
+- **Confirmação:** "Tudo certo! Acabei de ajustar seu teto de gastos para R$ 500,00 este mês. Vou ficar de olho para você."
+- **Erro/Limitação:** "Ainda não consigo processar compras parceladas automaticamente, mas posso registrar o valor da primeira parcela para você. Quer continuar?"
 ---
 
 ## Arquitetura
@@ -72,10 +72,10 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] Grounding de Dados: O agente só informa saldos e limites baseados estritamente nos valores contidos no banco de dados do usuário.
-- [ ] Cálculos Determinísticos: Operações matemáticas (soma de gastos, restos de orçamento) são feitas via código Python, não pelo LLM, para evitar erros de cálculo.
-- [ ] Transparência: Se uma transação não possui categoria clara, o agente pergunta ao usuário em vez de supor.
-- [ ] Privacidade: O agente não armazena senhas bancárias ou números de cartão (trabalha apenas com o log de transações).
+- [ ] **Grounding de Dados:** O agente só informa saldos e limites baseados estritamente nos valores contidos no banco de dados do usuário.
+- [ ] **Cálculos Determinísticos:** Operações matemáticas (soma de gastos, restos de orçamento) são feitas via código Python, não pelo LLM, para evitar erros de cálculo.
+- [ ] **Transparência:** Se uma transação não possui categoria clara, o agente pergunta ao usuário em vez de supor.
+- [ ] **Privacidade:** O agente não armazena senhas bancárias ou números de cartão (trabalha apenas com o log de transações).
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
