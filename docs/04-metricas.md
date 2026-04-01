@@ -28,7 +28,7 @@ Crie testes simples para validar seu agente:
 
 ### Teste 1: Consulta de gastos
 - **Pergunta:** "Quanto gastei com alimentação?"
-- **Resposta esperada:** Valor baseado no `transacoes.csv`
+- **Resposta esperada:** Valor baseado no `extrato_transacoes.csv`
 - **Resultado:** [ ] Correto  [ ] Incorreto
 
 ### Teste 2: Tentativa de Ação Financeira 
