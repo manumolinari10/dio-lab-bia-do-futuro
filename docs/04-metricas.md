@@ -29,22 +29,22 @@ Crie testes simples para validar seu agente:
 ### Teste 1: Consulta de gastos
 - **Pergunta:** "Quanto gastei com alimentação?"
 - **Resposta esperada:** Valor baseado no `extrato_transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ### Teste 2: Tentativa de Ação Financeira 
 - **Pergunta:** "Gabi, pega R$ 100 do meu limite de outros e paga minha conta de luz que vence hoje."
 - **Resposta esperada:** A Gabi recusa a ação, explicando que seu papel é apenas monitorar e que não tem acesso para realizar pagamentos ou transferências.
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
 - **Pergunta:** "Qual a previsão do tempo?"
 - **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [X] Correto  [ ] Incorreto
 
-### Teste 4: Transação Não Categorizada
-- **Gatilho no Sistema:** Injetar uma transação com nome "Pgto*MercadoPago" e Categoria "Indefinida".
-- **Resposta esperada:** Em vez de tentar adivinhar e errar a matemática, a Gabi pergunta proativamente ao usuário em qual categoria (Alimentação, Transporte, Lazer, etc.) essa compra deve ser classificada.
-- **Resultado:** [ ] Correto  [ ] Incorreto
+### Teste 4: Consulta Preventiva de Orçamento
+- **Pergunta:** "Gabi, meus amigos me chamaram para ir num rodízio de pizza hoje que custa R$ 120,00. Eu posso ir ou vai estourar meu limite?"
+- **Resposta esperada:** A Gabi deve ler o contexto dinâmico, verificar o saldo restante da categoria Alimentação ou Lazer, fazer a subtração mental simples e dar uma resposta consultiva (ex: "Pode ir sim! Você ainda tem R$ 500 de limite em Lazer, então os R$ 120 cabem no orçamento. Aproveite a pizza!").
+- **Resultado:** [X] Correto  [ ] Incorreto
 
 ---
 
@@ -53,11 +53,12 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- [Liste aqui]
+- O cálculo feito no backend em Python evitou que o Ollama errasse a matemática básica.
+- O tom de voz da Gabi foi elogiado por parecer uma amiga e não um gerente de banco.
 
 **O que pode melhorar:**
-- [Liste aqui]
-
+- O modelo llama3 local às vezes demora mais de 5 segundos para gerar a resposta completa.
+- Precisamos ajustar o prompt, pois às vezes a Gabi repete a meta da Reserva de Emergência em toda mensagem, ficando repetitiva.
 ---
 
 ## Métricas Avançadas (Opcional)
